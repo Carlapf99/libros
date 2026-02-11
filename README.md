@@ -13,6 +13,11 @@ Proyecto completo base para una web editorial minimalista y profesional con Djan
 - Admin de Django para gestión integral.
 - Diseño responsive con HTML + CSS propio (sin Bootstrap).
 
+
+## Documentación completa
+
+Consulta la guía extendida en `docs/PROJECT_DOCUMENTATION.md`.
+
 ## Estructura
 
 ```text
