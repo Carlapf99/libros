@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<article class="post-detail">
+  <h1>{{ post.title }}</h1>
+  <div class="lead">{{ post.content|linebreaks }}</div>
+</article>
+
+<section class="comments-section">
+  <h2>Comentarios</h2>
+  {% for comment in comments %}
+    <article class="card comment-card">
+      <h3>{{ comment.name }}</h3>
+      <p>{{ comment.body|linebreaks }}</p>
+      <small>{{ comment.created_at|date:'d/m/Y H:i' }}</small>
+    </article>
+  {% empty %}
+    <p>Este artículo aún no tiene comentarios aprobados.</p>
+  {% endfor %}
+</section>
+
+<section class="card comment-form-card">
+  <h2>Deja tu comentario</h2>
+  <form method="post" class="form-grid">
+    {% csrf_token %}
+    {{ form.honeypot }}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Enviar comentario</button>
+  </form>
+  <p class="muted">Los comentarios se revisan antes de publicarse.</p>
+</section>
+{% endblock %}
