@@ -34,8 +34,19 @@ pip install -r requirements/base.txt
 cp .env.example .env
 python manage.py migrate
 python manage.py createsuperuser
+python manage.py bootstrap_content
 python manage.py runserver
 ```
+
+## Uso del panel administrador
+
+1. Accede a `/admin/` con tu superusuario.
+2. Crea/edita el **Perfil del autor** (nombre, frase destacada y biografía).
+3. Crea libros en **Books** (puedes dejar portada vacía y subirla después).
+4. Crea artículos en **Blog > Posts** y publícalos.
+5. Modera comentarios en **Blog > Comments** usando acciones masivas.
+
+> En navegación pública verás acceso directo a `Admin` cuando inicies sesión como staff.
 
 ## Variables de entorno
 

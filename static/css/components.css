@@ -39,3 +39,14 @@ input:focus, textarea:focus { outline: 2px solid #d4c1b2; border-color: #d4c1b2;
 .price { font-weight: 700; font-size: 1.1rem; }
 .muted { color: var(--muted); font-size: 0.95rem; }
 .lead { font-size: 1.05rem; }
+
+
+.placeholder-cover {
+  min-height: 280px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background: #fbfaf8;
+}

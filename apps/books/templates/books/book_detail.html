@@ -2,7 +2,11 @@
 {% block title %}{{ book.title }}{% endblock %}
 {% block content %}
 <article class="book-detail">
-  <img src="{{ book.cover.url }}" alt="Portada {{ book.title }}">
+  {% if book.cover %}
+    <img src="{{ book.cover.url }}" alt="Portada {{ book.title }}">
+  {% else %}
+    <div class="placeholder-cover">Sin portada</div>
+  {% endif %}
   <div>
     <h1>{{ book.title }}</h1>
     <p class="lead">{{ book.synopsis|linebreaks }}</p>

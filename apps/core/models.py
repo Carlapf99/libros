@@ -6,7 +6,7 @@ class AuthorProfile(models.Model):
     full_name = models.CharField(max_length=150)
     hero_quote = models.CharField(max_length=255)
     biography = models.TextField()
-    photo = models.ImageField(upload_to='author/')
+    photo = models.ImageField(upload_to='author/', blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
