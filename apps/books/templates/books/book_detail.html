@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+<article class="book-detail">
+  <img src="{{ book.cover.url }}" alt="Portada {{ book.title }}">
+  <div>
+    <h1>{{ book.title }}</h1>
+    <p class="lead">{{ book.synopsis|linebreaks }}</p>
+    <p class="price">{{ book.price }} €</p>
+    <a class="btn" href="{{ book.purchase_url }}" target="_blank" rel="noopener noreferrer">Comprar</a>
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Libros{% endblock %}
+{% block content %}
+<section class="section-heading">
+  <h1>Libros</h1>
+</section>
+<section class="book-grid">
+  {% for book in books %}
+    <article class="card book-card">
+      <a href="{{ book.get_absolute_url }}">
+        <img src="{{ book.cover.url }}" alt="Portada {{ book.title }}">
+        <h2>{{ book.title }}</h2>
+      </a>
+      <p>{{ book.synopsis|truncatechars:130 }}</p>
+      <p class="price">{{ book.price }} €</p>
+    </article>
+  {% empty %}
+    <p>No hay libros cargados todavía.</p>
+  {% endfor %}
+</section>
+{% endblock %}
