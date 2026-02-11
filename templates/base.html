@@ -5,6 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}Web oficial del autor{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Sitio oficial del autor: libros, blog, biografía y contacto.{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}{% block og_title_inner %}Web oficial del autor{% endblock %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% block og_description_inner %}Sitio oficial del autor: libros, blog, biografía y contacto.{% endblock %}{% endblock %}">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">

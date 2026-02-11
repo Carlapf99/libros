@@ -73,6 +73,8 @@ Para Gmail usa App Password. Para producción se recomienda SendGrid.
 - `/blog/<slug>/` detalle + comentarios
 - `/contacto/` formulario de contacto
 - `/admin/` administración
+- `/robots.txt` directivas para bots
+- `/sitemap.xml` sitemap SEO
 
 ## Comentarios y anti-spam
 
@@ -86,3 +88,12 @@ Para Gmail usa App Password. Para producción se recomienda SendGrid.
 - `DEBUG=False`, `ALLOWED_HOSTS` y `CSRF_TRUSTED_ORIGINS` configurados.
 - PostgreSQL + WhiteNoise/CDN + HTTPS.
 - `python manage.py check --deploy`
+
+
+## Calidad y pruebas
+
+```bash
+python manage.py test
+```
+
+Incluye pruebas mínimas de páginas públicas, `robots.txt`, `sitemap.xml` y moderación de comentarios.

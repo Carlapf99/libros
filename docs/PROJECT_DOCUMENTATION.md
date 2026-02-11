@@ -227,3 +227,25 @@ python manage.py check --deploy
 4. **Blog sin comentarios**
    - Revisa en admin si están aprobados.
 
+
+
+---
+
+## 12) SEO y páginas de error
+
+El proyecto incluye:
+
+- Metadatos base (`title`, `description`, OpenGraph) en `templates/base.html`.
+- `robots.txt` en `/robots.txt`.
+- `sitemap.xml` en `/sitemap.xml` con páginas estáticas, libros y posts publicados.
+- Páginas personalizadas de error `404` y `500`.
+
+---
+
+## 13) Testing mínimo incluido
+
+Se añadieron pruebas base para:
+
+- Carga de páginas públicas (`home`, `about`, `contact`).
+- Disponibilidad de `robots.txt` y `sitemap.xml`.
+- Verificación de que comentarios nuevos quedan pendientes de aprobación.

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Página no encontrada{% endblock %}
+{% block meta_description %}La página que buscas no existe o fue movida.{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>Error 404</h1>
+  <p>No hemos encontrado la página que buscabas.</p>
+  <a class="btn" href="{% url 'home' %}">Volver al inicio</a>
+</section>
+{% endblock %}

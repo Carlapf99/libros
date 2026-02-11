@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'apps.core',
     'apps.books',
     'apps.blog',
@@ -95,3 +96,7 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD', default='')
 EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS', default=True)
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL', default='web@example.com')
 CONTACT_RECIPIENT_EMAIL = env('CONTACT_RECIPIENT_EMAIL', default='author@example.com')
+
+SITE_NAME = env('SITE_NAME', default='Web oficial del autor')
+SITE_URL = env('SITE_URL', default='http://127.0.0.1:8000')
+DEFAULT_SEO_DESCRIPTION = env('DEFAULT_SEO_DESCRIPTION', default='Sitio oficial del autor: libros, blog, biografía y contacto.')
