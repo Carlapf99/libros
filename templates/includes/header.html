@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="{% url 'home' %}" class="logo">Autor</a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a href="{% url 'book_list' %}">Libros</a></li>
+        <li><a href="{% url 'about' %}">Sobre mí</a></li>
+        <li><a href="{% url 'post_list' %}">Blog</a></li>
+        <li><a href="{% url 'contact' %}">Contacto</a></li>
+        {% if request.user.is_staff %}
+          <li><a href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a href="{% url 'logout' %}">Salir</a></li>
+        {% else %}
+          <li><a href="{% url 'login' %}">Acceder</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</header>

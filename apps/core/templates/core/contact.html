@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Contacto{% endblock %}
+{% block meta_description %}Formulario de contacto oficial del autor.{% endblock %}
+{% block content %}
+<section class="card contact-card">
+  <h1>Contacto</h1>
+  <p>Para prensa, eventos o colaboraciones, envía un mensaje desde este formulario.</p>
+  <form method="post" class="form-grid">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Enviar mensaje</button>
+  </form>
+</section>
+{% endblock %}
