@@ -18,6 +18,8 @@ Proyecto completo base para una web editorial minimalista y profesional con Djan
 
 Consulta la guía extendida en `docs/PROJECT_DOCUMENTATION.md`.
 
+Además, la propuesta formal del proyecto está en `docs/WEB_DEVELOPMENT_PROPOSAL.md`.
+
 ## Estructura
 
 ```text
