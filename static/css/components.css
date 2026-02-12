@@ -1,0 +1,57 @@
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 6px 18px rgba(23, 23, 23, 0.04);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.btn:hover { transform: translateY(-2px); opacity: 0.92; }
+
+.text-link { color: var(--accent); font-weight: 600; }
+.text-link:hover { text-decoration: underline; }
+
+.form-grid p { display: grid; gap: 0.3rem; }
+input, textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem;
+  font: inherit;
+}
+input:focus, textarea:focus { outline: 2px solid #d4c1b2; border-color: #d4c1b2; }
+
+.messages { list-style: none; padding: 0; margin: 0 0 1rem; }
+.message { padding: 0.8rem; border-radius: 8px; margin-bottom: 0.5rem; }
+.message.success { background: #e8f7ef; color: #1a6a3a; }
+.message.error { background: #ffefef; color: #8b1f1f; }
+
+.price { font-weight: 700; font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: 0.95rem; }
+.lead { font-size: 1.05rem; }
+
+
+.placeholder-cover {
+  min-height: 280px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background: #fbfaf8;
+}
+
+
+.compact-form textarea { min-height: 110px; max-height: 180px; }
+.comment-form-card { max-width: 360px; }
+@media (max-width: 900px) { .comment-form-card { max-width: 100%; } }
