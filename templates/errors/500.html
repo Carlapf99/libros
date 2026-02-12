@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Error del servidor{% endblock %}
+{% block meta_description %}Ha ocurrido un error interno en el servidor.{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>Error 500</h1>
+  <p>Ha ocurrido un problema interno. Inténtalo de nuevo más tarde.</p>
+  <a class="btn" href="{% url 'home' %}">Volver al inicio</a>
+</section>
+{% endblock %}
