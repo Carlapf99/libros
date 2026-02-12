@@ -21,7 +21,6 @@ class CommentModerationTests(TestCase):
             reverse('post_detail', kwargs={'slug': self.post.slug}),
             {
                 'name': 'Lector',
-                'email': 'lector@example.com',
                 'body': 'Este comentario tiene longitud suficiente.',
                 'honeypot': '',
             },

@@ -95,7 +95,7 @@ libros/
 
 - Lista de artículos publicados.
 - Detalle de artículo con comentarios aprobados.
-- Formulario de comentarios con moderación manual.
+- Formulario de comentarios con moderación manual (nombre + texto).
 
 ### Contacto (`/contacto/`)
 
@@ -143,8 +143,8 @@ Luego abre: `http://127.0.0.1:8000`
 Genera contenido mínimo de demostración:
 
 - 1 perfil de autor
-- 2 libros
-- 2 posts publicados
+- 10 libros
+- 5 posts publicados
 
 Esto sirve para no ver el sitio vacío la primera vez.
 

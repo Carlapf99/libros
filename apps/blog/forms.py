@@ -8,9 +8,10 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ('name', 'email', 'body')
+        fields = ('name', 'body')
         widgets = {
-            'body': forms.Textarea(attrs={'rows': 5}),
+            'name': forms.TextInput(attrs={'placeholder': 'Tu nombre'}),
+            'body': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Comparte tu opinión...'}),
         }
 
     def clean_body(self):

@@ -18,6 +18,8 @@ Proyecto completo base para una web editorial minimalista y profesional con Djan
 
 Consulta la guía extendida en `docs/PROJECT_DOCUMENTATION.md`.
 
+Además, la propuesta formal del proyecto está en `docs/WEB_DEVELOPMENT_PROPOSAL.md`.
+
 ## Estructura
 
 ```text
@@ -39,7 +41,7 @@ pip install -r requirements/base.txt
 cp .env.example .env
 python manage.py migrate
 python manage.py createsuperuser
-python manage.py bootstrap_content
+python manage.py bootstrap_content  # crea perfil + 10 libros + 5 posts demo
 python manage.py runserver
 ```
 
@@ -81,6 +83,7 @@ Para Gmail usa App Password. Para producción se recomienda SendGrid.
 - Todos los comentarios se guardan con `is_approved=False`.
 - Solo se muestran comentarios aprobados.
 - Honeypot oculto + límite temporal básico de envío.
+- El formulario de comentario pide nombre y texto (email opcional en modelo).
 
 ## Producción (recomendado)
 
