@@ -1,0 +1,26 @@
+:root {
+  --bg: #f7f5f2;
+  --surface: #ffffff;
+  --text: #1d1d1d;
+  --muted: #676767;
+  --accent: #7f5a40;
+  --border: #e4dfd9;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }

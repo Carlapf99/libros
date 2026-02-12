@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Sobre mí{% endblock %}
+{% block meta_description %}Biografía oficial del autor y perfil.{% endblock %}
+{% block content %}
+<section class="about-grid">
+  <div>
+    <h1>Sobre mí</h1>
+    {% if profile %}
+      <p class="lead">{{ profile.biography|linebreaks }}</p>
+    {% else %}
+      <p class="lead">Configura tu biografía desde el admin.</p>
+    {% endif %}
+  </div>
+  <div>
+    {% if profile and profile.photo %}
+      <img class="author-photo" src="{{ profile.photo.url }}" alt="{{ profile.full_name }}">
+    {% else %}
+      <div class="placeholder-cover">Foto del autor</div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
