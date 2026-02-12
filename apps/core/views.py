@@ -53,20 +53,10 @@ def robots_txt(_request):
 def home(request):
     profile = AuthorProfile.objects.first()
     featured_book = Book.objects.filter(is_featured=True).order_by('-created_at').first()
-    latest_posts = Post.objects.filter(is_published=True)[:3]
-    stats = {
-        'books': Book.objects.count(),
-        'posts': Post.objects.filter(is_published=True).count(),
-    }
     return render(
         request,
         'core/home.html',
-        {
-            'profile': profile,
-            'featured_book': featured_book,
-            'latest_posts': latest_posts,
-            'stats': stats,
-        },
+        {'profile': profile, 'featured_book': featured_book},
     )
 
 
